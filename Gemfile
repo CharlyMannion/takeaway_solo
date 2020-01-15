@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'capybara'
+gem "rack", ">= 2.0.8"
 gem 'rake'
 gem 'rspec'
 gem 'rubocop', '0.71.0'
