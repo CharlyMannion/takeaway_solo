@@ -1,2 +1,9 @@
+require_relative 'menu'
+
 class Order
-end 
+  attr_accessor :menu
+
+  def initialize(menu = Menu.new)
+    @menu = menu
+  end
+end
