@@ -12,4 +12,13 @@ describe Menu do
       expect(menu.items).to eq({})
     end
   end
+
+  describe '#add' do
+    it 'should add an item to the menu' do
+      dish = :tuna
+      price = 10
+      menu.add(dish, price)
+      expect(menu.items).to eq({ tuna: 10 })
+    end
+  end
 end
