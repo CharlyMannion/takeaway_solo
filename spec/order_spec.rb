@@ -31,5 +31,9 @@ describe Order do
     it 'should raise an error if the item selected isnt on the menu' do
       expect { order.choose(:chicken) }.to raise_error "Item not available"
     end
+    it 'should add to the sub total' do
+      order.choose(:cod)
+      expect(order.sub_total).to eq(12)
+    end
   end
 end

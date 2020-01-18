@@ -17,6 +17,7 @@ class Order
     fail "Item not available" if not_on_menu(item)
 
     @selection << item
+    @sub_total += @menu.items[item]
   end
 
   private
