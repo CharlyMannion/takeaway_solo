@@ -21,7 +21,7 @@ class Order
   end
 
   def confirm
-    "Thanks for your order of: #{@selection.join(", ")}" 
+    msg
   end
 
   private
@@ -31,5 +31,9 @@ class Order
     else
       true
     end
+  end
+
+  def msg
+    "Thanks for your order of: #{@selection.join(", ")}"
   end
 end
