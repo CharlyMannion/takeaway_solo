@@ -14,4 +14,9 @@ menu = Menu.new
 menu.add(:tuna, 10)
 menu.add(:cod, 12)
 menu.add(:chips, 5)
-p menu.items
+menu.items
+
+# order feature test:
+order = Order.new(menu)
+p order.menu
+p order.menu.items
