@@ -39,7 +39,8 @@ describe Order do
 
   describe '#confirm' do
     it 'should confirm the order' do
-      response = "Thanks for your order"
+      order.choose(:cod)
+      response = "Thanks for your order of: #{order.selection.join(", ")}"
       expect(order.confirm).to eq(response)
     end
   end

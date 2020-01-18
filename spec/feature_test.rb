@@ -26,4 +26,4 @@ order.choose(:tuna)
 order.choose(:chips)
 p order.selection
 p order.sub_total
-# p order.confirm
+p order.confirm
