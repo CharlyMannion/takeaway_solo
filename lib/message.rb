@@ -1,4 +1,4 @@
-# require 'twilio-ruby'
+require 'twilio-ruby'
 
 class Message
 
@@ -9,7 +9,7 @@ class Message
     @auth_token = ENV['AUTH_TOKEN']
     @from = ENV['TWILIO_NUMBER']
     @to = ENV['MY_NUMBER']
-    # @client = Twilio::REST::Client.new(account_sid, auth_token)
+    @client = Twilio::REST::Client.new(account_sid, auth_token)
   end
 
 #   def send
