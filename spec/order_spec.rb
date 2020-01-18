@@ -2,7 +2,7 @@ require 'order'
 require 'menu'
 
 describe Order do
-  let(:menu_dbl) { double :menu, items: { :cod=>12, :chips=>5 } }
+  let(:menu_dbl) { double :menu, items: { :cod => 12, :chips => 5 } }
   subject(:order) { described_class.new(menu_dbl) }
 
   describe '#initialize' do
@@ -19,7 +19,7 @@ describe Order do
 
   describe '#view_menu' do
     it 'should show you the menu items' do
-      expect(order.view_menu).to eq({ :cod=>12, :chips=>5 })
+      expect(order.view_menu).to eq({ :cod => 12, :chips => 5 })
     end
   end
 
@@ -44,7 +44,7 @@ describe Order do
       expect(order.confirm).to eq(response)
     end
     it 'should create an instance of send_sms' do
-      
+
     end
   end
 end
