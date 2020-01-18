@@ -36,4 +36,11 @@ describe Order do
       expect(order.sub_total).to eq(12)
     end
   end
+
+  describe '#confirm' do
+    it 'should confirm the order' do
+      response = "Thanks for your order"
+      expect(order.confirm).to eq(response)
+    end
+  end
 end

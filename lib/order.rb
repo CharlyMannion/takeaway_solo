@@ -20,6 +20,10 @@ class Order
     @sub_total += @menu.items[item]
   end
 
+  def confirm
+    "Thanks for your order" 
+  end
+
   private
   def not_on_menu(item)
     if @menu.items.key?(item)
