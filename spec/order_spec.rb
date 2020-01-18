@@ -13,6 +13,7 @@ describe Order do
 
   describe '#view_menu' do
     it 'should show you the menu items' do
+      expect(order.view_menu).to eq({ :cod=>12, :chips=>5 })
     end
   end
 end
