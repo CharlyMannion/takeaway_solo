@@ -13,9 +13,9 @@ class Message
   end
 
 #   def send
-#     client.messages.create(
-#     from: from,
-#     to: to,
+#     @client.messages.create(
+#     from: @from,
+#     to: @to,
 #     body: "Hey friend!"
 #     )
 #   end

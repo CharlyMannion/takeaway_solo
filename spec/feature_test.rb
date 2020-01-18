@@ -1,6 +1,8 @@
 # to run in irb:
 require './lib/order.rb'
 require './lib/menu.rb'
+require './lib/message.rb'
+
 
 # to run programme:
 # ruby ./lib/order.rb
@@ -22,8 +24,12 @@ order = Order.new(menu)
 # p order.view_menu
 # p order.menu.items.key?(:cod)
 # {:tuna=>10, :cod=>12, :chips=>5}
+
 order.choose(:tuna)
 order.choose(:chips)
 p order.selection
 p order.sub_total
 p order.confirm
+
+# msg = Message.new
+# msg.send
