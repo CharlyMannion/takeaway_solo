@@ -12,4 +12,8 @@ class Order
   def view_menu
     @menu.items
   end
+
+  def choose(item)
+    @selection << item
+  end
 end

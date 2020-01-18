@@ -24,6 +24,9 @@ describe Order do
   end
 
   describe '#choose' do
-    # it 'should '
+    it 'should add a chosen item to selections' do
+      order.choose(:tuna)
+      expect(order.selection).to eq([:tuna])
+    end
   end
 end
