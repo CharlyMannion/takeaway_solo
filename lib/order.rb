@@ -14,6 +14,17 @@ class Order
   end
 
   def choose(item)
+    fail "Item not available" if not_on_menu(item)
+
     @selection << item
+  end
+
+  private
+  def not_on_menu(item)
+    if @menu.items.key?(item)
+      false
+    else
+      true
+    end
   end
 end

@@ -25,8 +25,11 @@ describe Order do
 
   describe '#choose' do
     it 'should add a chosen item to selections' do
-      order.choose(:tuna)
-      expect(order.selection).to eq([:tuna])
+      order.choose(:cod)
+      expect(order.selection).to eq([:cod])
+    end
+    it 'should raise an error if the item selected isnt on the menu' do
+      expect { order.choose(:chicken) }.to raise_error "Item not available"
     end
   end
 end

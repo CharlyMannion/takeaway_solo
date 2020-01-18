@@ -20,5 +20,6 @@ menu.items
 order = Order.new(menu)
 # p order.menu
 p order.view_menu
+p order.menu.items.key?(:cod)
 # {:tuna=>10, :cod=>12, :chips=>5}
 # p order.choose(tuna)
