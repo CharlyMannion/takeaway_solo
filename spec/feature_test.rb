@@ -18,5 +18,5 @@ menu.items
 
 # order feature test:
 order = Order.new(menu)
-p order.menu
-p order.menu.items
+# p order.menu
+p order.view_menu
