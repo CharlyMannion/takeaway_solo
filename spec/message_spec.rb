@@ -1,7 +1,7 @@
-# require 'message'
+require 'message'
 
-# describe Message do
-#   subject(:message) { described_class.new }
+describe Message do
+  subject(:message) { described_class.new }
 
   # describe '#initialize' do
   #   it 'should have account SID' do
@@ -21,6 +21,6 @@
       #     expect(message.send).to eq("Text sent")
       #   end
       # end
-  # end
+  end
 
 # end
