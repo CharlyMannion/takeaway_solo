@@ -43,7 +43,7 @@ describe Order do
       response = "Thanks for your order of: #{order.selection.join(", ")}"
       expect(order.confirm).to eq(response)
     end
-    it 'should create an instance of send_sms' do
+    it 'should create an instance of message' do
 
     end
   end
