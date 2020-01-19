@@ -1,25 +1,32 @@
 require 'twilio-ruby'
+require 'dotenv/load'
 
 class Message
 
-  attr_reader :account_sid, :auth_token, :from, :to, :client
+  # attr_reader :account_sid, :auth_token, :from, :to, :client
 
-  def initialize
-    @account_sid = ENV['ACCOUNT_SID']
-    @auth_token = ENV['AUTH_TOKEN']
-    @from = ENV['TWILIO_NUMBER']
-    @to = ENV['MY_NUMBER']
-    @client = Twilio::REST::Client.new(ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN'])
-  end
+  # def initialize
+  #   @account_sid = ENV['ACCOUNT_SID']
+  #   @auth_token = ENV['AUTH_TOKEN']
+  #   @from = ENV['TWILIO_NUMBER']
+  #   @to = ENV['MY_NUMBER']
+  #   @client = Twilio::REST::Client.new(ENV['ACCOUNT_SID'], ENV['AUTH_TOKEN'])
+  # end
 
   def send
-    p "in the method top"
-    @client.messages.create(
-    from: @from,
-    to: @to,
+    account_sid = ENV['ACCOUNT_SID']
+    auth_token = ENV['AUTH_TOKEN']
+    client = Twilio::REST::Client.new(account_sid, auth_token)
+
+    from = ENV['TWILIO_NUMBER']
+    to = ENV['MY_NUMBER']
+
+    client.messages.create(
+    from: from,
+    to: to,
     body: "Hey friend!"
     )
-    p "in the method bottom"
+    "Text sent"
   end
 end
 
