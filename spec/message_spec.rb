@@ -17,11 +17,11 @@ describe Message do
       expect(message.to).to eq(ENV['MY_NUMBER'])
     end
 
-    describe '#send' do
-      it 'should send a confirmation of text being sent' do
-        expect(message.send).to eq("Text sent")
-      end
-    end
+    # describe '#send' do
+    #   it 'should send a confirmation of text being sent' do
+    #     expect(message.send).to eq("Text sent")
+    #   end
+    # end
   end
 
 end
