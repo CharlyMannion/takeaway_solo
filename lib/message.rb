@@ -23,8 +23,3 @@ class Message
     "Text sent"
   end
 end
-
-# ruby './lib/message.rb'
-# p "running the message programme"
-# msg = Message.new
-# msg.send

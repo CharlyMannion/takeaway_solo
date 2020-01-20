@@ -3,6 +3,7 @@ require 'menu'
 
 describe Order do
   let(:menu_dbl) { double :menu, items: { :cod => 12, :chips => 5 } }
+  # let(message_class_double) { double :message_class }
   subject(:order) { described_class.new(menu_dbl) }
 
   describe '#initialize' do
@@ -14,6 +15,9 @@ describe Order do
     end
     it 'should have a subtotal of 0' do
       expect(order.sub_total).to eq(0)
+    end
+    it 'should have the message class injected' do
+      expect(order.message).to be_a(Message)
     end
   end
 

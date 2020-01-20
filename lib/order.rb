@@ -2,13 +2,14 @@ require_relative 'menu'
 require_relative 'message'
 
 class Order
-  attr_accessor :menu, :selection, :sub_total
+  attr_accessor :menu, :selection, :sub_total, :message_class, :message
 
   def initialize(menu = Menu.new, message_class = Message)
     @menu = menu
     @selection = []
     @sub_total = 0
     @message_class = message_class
+    @message = @message_class.new
   end
 
   def view_menu
@@ -36,8 +37,7 @@ class Order
   end
 
   def send_text
-    message = @message_class.new
-    message.send
+    @message.send
   end
   # def msg
   #   "Thanks for your order of: #{@selection.join(", ")}"
