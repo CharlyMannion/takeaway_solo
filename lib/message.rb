@@ -18,7 +18,7 @@ class Message
     client.messages.create(
     from: @from,
     to: @to,
-    body: "Hey friend!"
+    body: "Order confirmed!"
     )
     "Text sent"
   end

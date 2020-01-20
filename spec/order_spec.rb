@@ -38,13 +38,12 @@ describe Order do
   end
 
   describe '#confirm' do
-    it 'should confirm the order' do
-      order.choose(:cod)
-      response = "Thanks for your order of: #{order.selection.join(", ")}"
-      expect(order.confirm).to eq(response)
+    before do
+      allow(order).to receive(:send_text)
     end
     it 'should create an instance of message' do
-
+      expect(order).to receive(:send_text)
+      order.confirm
     end
   end
 end

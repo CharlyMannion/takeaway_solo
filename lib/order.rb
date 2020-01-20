@@ -23,7 +23,7 @@ class Order
   end
 
   def confirm
-    msg
+    send_text
   end
 
   private
@@ -35,7 +35,11 @@ class Order
     end
   end
 
-  def msg
-    "Thanks for your order of: #{@selection.join(", ")}"
+  def send_text
+    message = @message_class.new
+    message.send
   end
+  # def msg
+  #   "Thanks for your order of: #{@selection.join(", ")}"
+  # end
 end
