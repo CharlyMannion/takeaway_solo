@@ -25,6 +25,6 @@ class Message
 end
 
 # ruby './lib/message.rb'
-p "running the message programme"
-msg = Message.new
-msg.send
+# p "running the message programme"
+# msg = Message.new
+# msg.send
