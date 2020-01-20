@@ -15,9 +15,6 @@ describe Order do
     it 'should have a subtotal of 0' do
       expect(order.sub_total).to eq(0)
     end
-    # it 'should have message class injected' do
-    #   expect(order.message_class).to
-    # end
   end
 
   describe '#view_menu' do
@@ -47,7 +44,7 @@ describe Order do
       expect(order.confirm).to eq(response)
     end
     it 'should create an instance of message' do
-      
+
     end
   end
 end

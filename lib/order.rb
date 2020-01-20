@@ -4,10 +4,11 @@ require_relative 'message'
 class Order
   attr_accessor :menu, :selection, :sub_total
 
-  def initialize(menu = Menu.new)
+  def initialize(menu = Menu.new, message_class = Message)
     @menu = menu
     @selection = []
     @sub_total = 0
+    @message_class = message_class
   end
 
   def view_menu
