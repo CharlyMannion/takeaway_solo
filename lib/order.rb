@@ -1,4 +1,5 @@
 require_relative 'menu'
+require_relative 'message'
 
 class Order
   attr_accessor :menu, :selection, :sub_total

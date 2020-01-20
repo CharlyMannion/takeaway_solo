@@ -3,7 +3,7 @@ require 'dotenv/load'
 
 class Message
 
-  attr_reader :from, :to
+  attr_reader :from, :to, :auth_token, :account_sid
 
   def initialize
     @account_sid = ENV['ACCOUNT_SID']
