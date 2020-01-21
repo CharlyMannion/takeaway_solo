@@ -37,7 +37,9 @@ class Order
   end
 
   def send_text
-    @message.send
+    # chosen_selection = @selection
+    # @message = @message_class.new(chosen_selection)
+    @message.send(chosen_selection)
   end
   # def msg
   #   "Thanks for your order of: #{@selection.join(", ")}"

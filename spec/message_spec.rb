@@ -1,6 +1,7 @@
 require 'message'
 
 describe Message do
+  # message = "tuna"
   subject(:message) { described_class.new }
 
   describe '#initialize' do
