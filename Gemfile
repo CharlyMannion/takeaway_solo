@@ -10,3 +10,4 @@ gem 'rubocop-rails'
 gem 'simplecov', require: false, group: :test
 gem 'simplecov-console', require: false, group: :test
 gem 'twilio-ruby'
+gem "nokogiri", ">= 1.10.8"
